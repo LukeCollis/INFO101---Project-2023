@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html><!-- Do NOT put any content outside of the HTML tags-->
+	<head>
+		<title>Register | Capital Cycles</title>
+		<link rel= "stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	
+    <!-- All content visible on the webpage will be inside the body tags below-->
+	<body> 
+		<div id = "wrapper">  <!-- Creates a wrapper that will fit in the navigation bar. This was used in websites I have made previously in high school.-->
+			<nav>
+			<ul>
+				<li><a href = "index.html"><img src = "logo.png" width = "200" height = "150" alt = "Logo for capital cycles."></a></li> <!--- Displays the logo on the nav. Also links to the page 'index' -->
+				<li><a id = "text" href = "services.html">services</a></li> <!-- Links the page 'services' on the nav. -->
+				<li><a id = "text" href = "faq.html">faq</a></li> <!-- Links the page 'faq' on the nav.-->
+				<li><a id = "text" href = "regpay.html">register</a></li> <!-- Links the page 'register' on the nav.-->
+			</ul>
+			</nav>
+		</div>
+
+	<article>
+			<div class = "row">
+				<div class = "column"> <!-- Displays all the forms on the left side of the page. -->
+					<h1 style = "text-align: left;  margin-left: 20px;"> Register:</h1>
+						<form name="reg" onsubmit="register()" method="post"> <!-- When the user clicks the submit button on the form, it calls the JS function register()-->
+							<p style = "text-align: left;  margin-left: 20px;">Enter your first and last name:</p> <input style = "margin-left: 20px;" type="text" name="firstlastname">
+							<br>
+							<p style = "text-align: left;  margin-left: 20px;">Enter your email</p> <input style = "margin-left: 20px;" type="text" name="email">
+							<br>
+							<p style = "text-align: left; margin-left: 20px;"> Enter your date of birth: </p><input style = "margin-left: 20px;" type = "date" name = "dob">
+							<br>
+							<p style = "text-align: left;  margin-left: 20px;"> Enter your address: </p><input style = "margin-left: 20px;" type = "text" name = "address">
+							<br>
+							<p style = "text-align: left;  margin-left: 20px;">Enter your password:</p><input style = "margin-left: 20px;" type = "password" name = "password">
+							<br>
+							<p style = "text-align: left;  margin-left: 20px;">Confirm your password:</p><input style = "margin-left: 20px;" type = "password" name = "confirm">
+							<br>
+							<br>
+							<input style = "margin-left: 20px;" type = "submit" value = "Submit" name = "submit">
+						</form>
+						<br>
+						<br>
+					<h1 style = "text-align: left;  margin-left: 20px;"> Returning user?</h1>
+						<form name = "login"> <!--- Defines the form login. This form does not call any JS functions on submitting.-->
+							<p style = "text-align: left;  margin-left: 20px;">Enter your email</p> <input style = "margin-left: 20px;" type="text" name="email">
+							<br>
+							<p style = "text-align: left;  margin-left: 20px;">Enter your password:</p><input style = "margin-left: 20px;" type = "password" name = "password">
+							<br>
+							<br>
+							<input style = "margin-left: 20px;" type = "submit" value = "Submit" name = "submit">
+						</form>
+					<h1 style = "text-align: left;  margin-left: 20px;"> Hire: </h1>
+					<p style = "text-align: left;  margin-left: 20px;">Select the bike/scooter you want to hire:</p>
+					<form name = "pay" method = "post">
+						<select style = "margin-left: 20px;" id = "bikeOptions" name ="Bikes"> <!-- Creates a button that opens a drop down menu when clicked. The options are defined below. -->
+							<option value="Select" selected>Select Bike/Scooter</option>
+							<option value="Electric Bike">Electric Bike</option>
+							<option value="Mountain Bike">Mountain Bike</option>
+							<option value="Road Bike">Road Bike</option>
+							<option value="Electric Scooter">Electric Scooter</option>
+							<option value="Monster Scooter">Monster Scooter</option>
+						</select>
+						<br>
+						<br>
+						<br>
+						<p style = "text-align: left;  margin-left: 20px;">Select your pickup location:</p><select style = "margin-left: 20px;" id = "locationOptions" name="location"> 
+							<option value="default">Select an option</option>
+						</select>
+						<br>
+						<br>
+						<br>
+						<p style = "text-align: left;  margin-left: 20px;">Distance traveling: (km)</p><input style = "margin-left: 20px;" min="0" type = "number" name = "distance">
+						<br>
+						<br>
+						<br>
+						<input style="margin-left: 20px;" type="submit"  value="Pay" name="submit"> 
+						<br>
+						<br>
+					</form>
+
+
+				</div>
+				<div class = "column"> <!-- Puts images on the left side of the page.-->
+					<br>
+					<br>
+					<br>
+					<img style = "width: 600px;" src = "biking3.jpg" alt = "Photo of cyclists near the Control Tower, Wellington">  <!-- Source: Colin Knowles, Creative Commons, via Flickr - https://www.flickr.com/photos/colink/3560594234-->
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<img style = "width: 600px;" src = "biking4.jpg" alt = "Photo of cyclists on a track, Wellington"> <!-- Source: US Embassy from New Zealand, Public domain, via Wikimedia Commons - https://commons.wikimedia.org/wiki/File:Mountain_Biking,_September_24,_2017_(37435321085).jpg -->
+				</div>
+			</div>
+		
+
+	</article>
+
+		<footer> <!-- Defines the footer container-->
+			<div class = "inner_footer">
+					<div class = "logo_container"> <!--- Shows the logo of the website. -->
+						<img src = "logo.png" alt = "Logo of the website">
+					</div>
+					
+					<div class = "footer_third"> <!-- Splits the content of the footer into thirds. -->
+						<span>
+						Contact Us: <br>
+						hello@capitalcycles.co.nz <br>
+						0800 CYCLES
+						</span>
+					</div>
+					
+					<div class = "footer_third">
+						<span>
+							© 2023 <br> 
+							Capital Cycles Ltd
+							</span>
+					</div>
+					
+					<div class = "footer_third">
+						<span>
+						76 Featherston Street, Wellington 6037, New Zealand 
+						</span>
+					
+					</div>
+			</div>
+		</footer> <!-- Defines the end of the footer. -->
+
+
+
+
+
+
+
+
+
+
+	<script src="myscripts.js"></script>
+	</body>
+</html> 

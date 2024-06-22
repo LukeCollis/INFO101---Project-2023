@@ -1,0 +1,307 @@
+  html {
+    padding: 0;  /* Setting the padding and margin to 0 results in the webpage covering the entire area in the browser.*/
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  body {
+    padding: 0; /* Setting the padding and margin to 0 results in the webpage covering the entire area in the browser.*/
+    margin: 0;
+    overflow: auto;
+    height: 100%;
+  }
+  
+  
+  nav {
+    position: sticky;
+    top: 0; /* Puts the nav in the top most, left most and right most position on the page. */
+    left: 0;
+    right: 0;
+    background: #222222; /*Sets the colour of the nav to #222222*/
+    height: 100px; /* Sets the height of the nav to 100px */
+    z-index: 2; /* Sets the z-index to 2. This means that any elements with a z-index of less than 2 will display below the nav, while any elements with a z-index of more than 2 will display above the nav. The default is 0.*/
+    align-items: center;
+    display: flex; /*Displays the nav using the flexbox model, which allows for the content in the nav to be centered via align-items: center;*/
+  }
+  
+  nav ul {
+    list-style: none; /*Doesn't add any special styles to the content in the nav.*/
+    margin: 0; /* Setting the margin and padding to zero results in the ul being at the top of the nav. */
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center; /*Displays the nav using the flexbox model, which allows for the content in the nav to be centered via align-items: center;*/
+  }
+  
+  nav ul li {
+    padding: 0;
+    margin: 0; /* Setting the margin and padding to zero results in the li being at the top of the nav. */
+  }
+  
+  nav ul li a {
+
+    display: inline-block; /* Displays all list items horizontally instead of vertically.*/
+
+  }
+
+  nav ul li a:hover {
+    animation: bounce 0.5s infinite; /*Plays the animation bounce (defined futher below) when the a elements of the nav are hovered over. I used https://www.w3schools.com/css/css3_animations.asp as a basis for creating this animation.*/
+  }
+  
+  #text { /* Customises all text with the id 'text', which is the text in the nav bar.*/
+    color: white;
+    text-decoration: none;
+    display: inline-block; /* Displays all list items horizontally instead of vertically.*/
+    padding: 60px 50px;
+    font-family: 'Adapta_extrabold', sans-serif; /*Sets the font */
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 24px;
+  }
+
+#info { /* Sets the width of the text in 'who we are' to 50%, also adds padding (space between the corner of the page and the text) to the left by 25%'*/
+  width: 50%;
+  padding-left: 25%;
+}
+
+.imgcontainer{
+  position: relative; /* Allows the img container to be positioned relatively (using left, top, bottom)*/
+}
+
+.slogan1 { /* Customises all text with the class 'slogan1', which is the top text in the imgcontainer.*/
+  position: absolute; /* Puts the slogan in the centre of the imgcontainer.*/
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Moves the element from its current position to the middle */
+  text-align: center;
+  font-family: 'Adapta_extrabold', sans-serif;
+  z-index: 1; 
+  font-size: 60px;
+  color: white;
+  width: 100%;
+}
+
+.slogan2 { /* Customises all text with the class 'slogan2', which is the lower text in the imgcontainer.*/
+  position: absolute; /* Puts the slogan in the centre of the imgcontainer.*/
+  top: 20%;
+  left: 50%;
+  z-index: 1;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-family: 'Adapta_extrabold', sans-serif;
+  font-size: 36px;
+  color: white;
+  width: 100%;
+}
+
+article {
+    float: none; /* Positions the article in the center of the page. */
+    width:100%; /* Sets the width at 100% */
+    max-width: 100%; /* Sets the max width */
+    z-index: 50; /* Did this so that nothing overlaps the article */
+}
+
+article h1{ /* Sets font and aligns text to center. The font is a custom font defined at the bottom of the file */
+  text-align: center;
+  font-family: 'Adapta_extrabold', sans-serif;
+}
+
+article h3{ /* Sets font and aligns text to center. The font is a custom font defined at the bottom of the file */
+  text-align: center;
+  font-family: 'Adapta_extralight', sans-serif;
+}
+
+article p{ /* Sets font and aligns text to center. The font is a custom font defined at the bottom of the file */
+  text-align: center;
+  font-family: 'Adapta_extralight', sans-serif;
+}
+
+.faq h1 { /* Sets font and aligns text to center. The font is a custom font defined at the bottom of the file */
+  text-align: center;
+  font-size: 250%;
+  font-family: 'Adapta_extrabold', sans-serif;
+
+}
+
+.faq h2 { /* Sets font and aligns text to center. The font is a custom font defined at the bottom of the file */
+  text-align: center;
+  font-family: 'Adapta_extrabold', sans-serif;
+  color: black;
+}
+
+.registation { /* Sets font and aligns text to center. The font is a custom font defined at the bottom of the file */
+  text-align: center;
+  font-family: 'Adapta_extrabold', sans-serif;
+  background-color: none;
+}
+
+
+.questions h2::first-letter { /* Changes colour to red and makes font size bigger for only the first letter of h2 in the questions div. */
+  font-size: 150%;
+  color: grey;
+}
+
+.faq h3 { /* Sets font and aligns text to center. The font is a custom font defined at the bottom of the file */
+  text-align: center;
+  font-family: 'Adapta_extralight', sans-serif;
+  color: black;
+}
+
+.questions h3::first-letter { /* Changes colour to red and makes font size bigger for only the first letter of h3 in the questions div. */
+  font-size: 150%;
+  color: grey;
+  font-family: 'Adapta_extrabold', sans-serif;
+}
+
+.feedbackform textarea { /* Customises the textarea (where the user gives their feedback on faq.html */
+  resize: none; 
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Adapta_extralight', sans-serif;
+}
+
+.feedbackform button  {  /* Customises the submit button for the feedback form on faq.html */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-family: 'Adapta_extralight', sans-serif;
+  font-size: 120%;
+}
+.row {
+    display: flex;
+  }
+  
+.column { /* Makes the column take 49% (almost half) of the page up*/
+    flex: 49%;
+    padding: 5px;
+  }
+
+.column img { /* Customises the images in the column */
+  width: 700px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.servicephoto { /* Sets the position and margins for servicephoto, which contains the photo for each product capital cycles sells. I got help with this from https://www.w3schools.com/css/css_image_gallery.asp*/
+  margin: 15px;
+  margin-left: 35px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 450px;
+  
+}
+
+.servicephoto:hover { /* When the user hovers over the servicephoto div, the border colour is changed. */
+  border: 1px solid #777; 
+}
+
+.servicephoto img { /* Sets the image to take up the entire size of the service photo div, and sets the height to auto to prevent the image stretching.*/
+  width: 100%;
+  height: 300px;
+}
+
+.text { /*Customises the text underneath the servicephoto div. */
+  padding: 15px;
+  text-align: center;
+  font-size: 125%;
+  font-family: 'Adapta_extrabold', sans-serif;
+  
+}
+
+#photo { /*Customises the photos of the team at capital cycles*/
+  width: 150px;
+  height: auto;
+  border-radius: 50%; /*Makes the image a circle.*/
+  display: block; /*Displays the photo at full width within the div it is in*/
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#map { /*Positions the map on index.html*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer { /*Customises the footer*/
+  background-color: #222222;
+  width: 100%; /* Sets the width of the footer */
+	max-width: 100%; /* Sets the max width of the footer */
+	clear: both; /* Prevents floating */
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+
+
+.inner_footer { /*Customises the inner footer div, to display as a block and have a margin of 0, and width of 1100px.*/
+	display: block;
+	margin: 0 auto;
+	width: 1100px;
+}
+
+.inner_footer .logo_container { /*Customises the logo_container, which contains the logo on the footer.*/
+	width: 35%;
+	float: left;
+	height: 100px;
+  display: flex;
+  align-items: center;
+  
+	
+}
+
+.inner_footer .logo_container img { /*Customises the image in the logo container*/
+	width: 200px;
+	height: auto;
+}
+
+.inner_footer .footer_third{ /*Positions each of the thirds of the footer, which each contain text.*/
+	width: calc(21.6666666667% - 20px);
+	margin-right: 10px;
+	float: left;
+	height: 100px;
+}
+
+.inner_footer .footer_third:last-child { /*Sets the right most text in the footer to have a right margin of 0.*/
+	margin-right: 0px;
+}
+
+
+.inner_footer .footer_third span{ /*Customises the span (text) in the footer.*/
+	font-family: 'Adapta_extrabold', sans-serif;
+	color: white;
+	font-size: 16px;
+	font-weight: 200;
+	display: flex;
+  align-items: center;
+	width: 250px;
+	padding-top: 20px;
+  margin-left: 10px;
+}
+  
+  @font-face { /*Defines and links the font adapta_extrabold.*/
+    font-family: Adapta_extrabold;
+    src: url(Typekiln\ -\ AdaptaDisplay-ExtraBold.otf) format(opentype);
+  }
+  
+  @font-face { /*Defines and links the font adapta_extralight.*/
+    font-family: Adapta_extralight;
+    src: url(Typekiln\ -\ AdaptaText-ExtraLight.otf) format(opentype);
+  }
+
+  @keyframes bounce { /*Defines the animation bounce*/
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); /*Sets the text to move vertically by -5px when the animation is half way done. Moves it back to the original position.*/
+    }
+  }
